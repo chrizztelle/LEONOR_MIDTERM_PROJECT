@@ -123,7 +123,7 @@ class RoomController extends Controller
         }
 
         if ($request->filled('type_filter') && $request->type_filter != '') {
-            $query->where('room_type_id', $request->type_filter);
+            $query->where('rooms_type_id', $request->type_filter);
         }
 
         $rooms = $query->latest()->get();
